@@ -355,6 +355,16 @@
     padding: 8px;
 }
 
+.errorMessage {
+    font-size: 1.6rem;
+    color: red;
+    /* display: none; */
+}
+
+.invalid .body-input {
+    border: 1px solid red;
+}
+
 .contact-body-btn {
     background-color: #000;
     color: #fff;
