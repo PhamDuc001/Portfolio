@@ -5,7 +5,7 @@ function validator(options) {
         var errorElement = inputElement.parentElement.querySelector(options.errorMessage)
         var errorMessage
         var rules = selectorRules[rule.selector]
-        console.log(rules)
+
         for (var i = 0; i < rules.length; i++) {
             errorMessage = rules[i](inputElement.value)
             if (errorMessage) break;
@@ -32,9 +32,12 @@ function validator(options) {
             })
             if (isFormValid) {
                 if (typeof options.onsubmit === 'function') {
-                    options.onsubmit({
-                        name: 'Phạm Đức'
-                    })
+                    var enableInput = formElement.querySelectorAll('[name]')
+                    var formValues = Array.from(enableInput).reduce(function(values, input) {
+                        values[input.name] = input.value
+                        return values;
+                    }, {})
+                    options.onsubmit(formValues)
                 }
             }
         }

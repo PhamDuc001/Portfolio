@@ -242,39 +242,39 @@
                             </div>
                         </div>
                         <!-- Contact-input -->
-                        <div class="content">
-                            <div id="contact-body" class="contact-body">
-                                <form action="">
-                                    <div class="body-item ">
-                                        <label for="fullname" class="body-label">Name</label>
-                                        <input id="nameInput" type="text" class="body-input" placeholder="Họ và tên">
-                                        <span class="errorMessage"></span>
-                                    </div>
-                                    <div class="body-item ">
-                                        <label for="email" class="body-label">Email</label>
-                                        <input id="emailInput" type="email" class="body-input" placeholder="Email">
-                                        <span class="errorMessage"></span>
-                                    </div>
-                                    <div class="body-item ">
-                                        <label for="password" class="body-label">Mật khẩu</label>
-                                        <input id="passInput" type="text" class="body-input" placeholder="Password">
-                                        <span class="errorMessage"></span>
-                                    </div>
-                                    <div class="body-item ">
-                                        <label for="password" class="body-label">Nhập lại mật khẩu</label>
-                                        <input id="confirmInput" type="text" class="body-input" placeholder="">
-                                        <span class="errorMessage"></span>
-                                    </div>
-                                    <div class="body-item">
-                                        <label for="" class="body-label">Message</label>
-                                        <input type="text" class="body-input" placeholder="Lời nhắn">
-                                    </div>
+                        <form action="" id="contact-body" class="contact-body">
 
-                                    <input type="submit" value=" Submit" class="btn contact-body-btn">
-                                </form>
-
+                            <div class="body-item ">
+                                <label for="nameInput" class="body-label">Name</label>
+                                <input name="nameInput" id="nameInput" type="text" class="body-input" placeholder="Họ và tên">
+                                <span class="errorMessage"></span>
                             </div>
-                        </div>
+                            <div class="body-item ">
+                                <label for="emailInput" class="body-label">Email</label>
+                                <input name="emailInput" id="emailInput" type="email" class="body-input" placeholder="Email">
+                                <span class="errorMessage"></span>
+                            </div>
+                            <div class="body-item ">
+                                <label for="passInput" class="body-label">Mật khẩu</label>
+                                <input name="passInput" id="passInput" type="text" class="body-input" placeholder="Password">
+                                <span class="errorMessage"></span>
+                            </div>
+                            <div class="body-item ">
+                                <label for="confirmInput" class="body-label">Nhập lại mật khẩu</label>
+                                <input name="confirmInput" id="confirmInput" type="text" class="body-input" placeholder="">
+                                <span class="errorMessage"></span>
+                            </div>
+                            <div class="body-item">
+                                <label for="" class="body-label">Message</label>
+                                <input type="text" class="body-input" placeholder="Lời nhắn">
+                            </div>
+
+                            <input type="submit" value=" Submit" class="btn contact-body-btn">
+
+                        </form>
+
+
+
                         <!-- Footer -->
                         <footer class="footer-container">
                             <div class="row">
@@ -338,10 +338,10 @@
                 validator.isConfirm('#confirmInput', function() {
                     return document.querySelector('#contact-body #passInput').value;
                 }, 'Mật khẩu không chính xác'),
-                onsubmit = function(data) {
-                    console.log(data)
-                }
-            ]
+            ],
+            onsubmit: function(data) {
+                console.log(data)
+            }
         })
     </script>
 </body>
