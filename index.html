@@ -10,22 +10,27 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="./assets/css/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <script src="./assets/main.js"></script>
+    <script src="./assets/validator.js"></script>
 </head>
 
 <body>
-    <div class="wraper">
+    <div class="wraper ">
         <div class="row">
-            <div class="col-1-4 portfolio-infor">
+            <div class="col-1-4 portfolio-infor ">
+
                 <div class="portfolio-avt">
                     <img class="portfolio-img" src="./assets/css/img/avt.jpg" alt="Picture">
+                    <i onclick="closeInfor()" class="close__infor-icon fa-solid fa-x"></i>
                 </div>
                 <h4 class="portfolio-text">PORTFOLIO</h4>
                 <p class="portfolio-sub-text">Template by W3CSS</p>
                 <ul class="portfolio-footer__list">
-                    <li class="portfolio-footer__item"><i class="portfolio-item__icon fa-solid fa-table-cells-large"></i>PORTFOLIO</li>
-                    <li class="portfolio-footer__item"><i class="portfolio-item__icon fa-solid fa-user"></i>ABOUT</li>
-                    <li class="portfolio-footer__item"><i class="portfolio-item__icon fa-solid fa-envelope"></i>CONTACT</li>
+                    <li><a href="#header" class="portfolio-footer__item "><i class="portfolio-item__icon fa-solid fa-table-cells-large"></i>PORTFOLIO</a></li>
+                    <li><a href="#about" class="portfolio-footer__item "><i class="portfolio-item__icon fa-solid  fa-user"></i>ABOUT</a></li>
+                    <li><a href="#contact" class="portfolio-footer__item "><i class="portfolio-item__icon fa-solid fa-envelope"></i>CONTACT</a></li>
+
                 </ul>
                 <div class="portfolio-social">
                     <a href=""> <i class="fa-brands fa-facebook"></i></a>
@@ -35,8 +40,9 @@
                     <a href=""><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
-            <div class="col-3-4">
-                <div class="header">
+            <div class="col-3-4 ">
+                <div id="header" class="header">
+                    <h1 onclick="clickMenu()" class="header-menu"><i class="fa-solid fa-list"></i></h1>
                     <h1 class="header-text">My Portfolio</h1>
                     <div class="filter">
                         <span class="filter-menu">Filter:</span>
@@ -119,7 +125,8 @@
 
                     </div>
                 </div>
-                <div class="row page-img-container">
+                <!-- About me -->
+                <div id="about" class="row page-img-container">
                     <div class="col-1-2">
                         <img class="page-img1" src="./assets/css/img/avt_page.jpg" alt="Picture">
                     </div>
@@ -127,7 +134,6 @@
                         <img class="page-img2" src="./assets/css/img/avt_page2.jpg" alt="Picture">
                     </div>
                 </div>
-                <!-- About me -->
                 <div class="about-me">
                     <h2 class="about-text">About me</h2>
                     <p class="about-sub-text">Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo
@@ -219,7 +225,7 @@
                     </div>
                 </div>
                 <!-- Contact-header -->
-                <div class="contact">
+                <div id="contact" class="contact">
                     <div class="contact-container">
                         <h2 class="contact-header ">Contact me</h2>
                         <div class="contact-list-box">
@@ -349,6 +355,17 @@
                 console.log(data)
             }
         })
+        var menuElement = document.querySelectorAll('.portfolio-footer__list .portfolio-footer__item')
+        var arrItem = []
+        for (itemElement of menuElement) {
+            itemElement.onclick = function() {
+                arrItem.shift()
+                arrItem.push(this)
+                    // console.log(arrItem[0])
+                console.log(arrItem)
+                console.log(arrItem[0].classList.add('change-color'))
+            }
+        }
     </script>
 </body>
 

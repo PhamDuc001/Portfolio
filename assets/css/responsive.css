@@ -1,0 +1,65 @@
+/***Tablet***/
+
+@media(min-width: 720px) and (max-width: 1024px) {
+    .header-menu {
+        display: block;
+    }
+    .portfolio-infor {
+        background-color: rgb(165, 195, 252);
+        position: fixed;
+        height: 100vh;
+        width: 35%;
+        margin-top: -8px;
+        padding-top: 8px;
+    }
+    .close__infor-icon {
+        display: block;
+    }
+    .col-3-4 {
+        width: 100%;
+    }
+    .col-footer {
+        width: 100%;
+    }
+}
+
+
+/******PC*****/
+
+@media (min-width: 1024px) {
+    .portfolio-infor {
+        display: block;
+    }
+}
+
+
+/*****Phone******/
+
+@media (max-width: 720px) {
+    .col-1-3,
+    .col-1-2,
+    .col-3-4 {
+        width: 100%;
+    }
+    .page-img1,
+    .page-img2 {
+        padding: 0;
+    }
+    .body-input {
+        margin: 6px 1px 6px 1px;
+    }
+    .col-footer {
+        width: 100%;
+    }
+    .header-menu {
+        display: block;
+    }
+    .portfolio-infor {
+        background-color: rgb(165, 195, 252);
+        position: fixed;
+        height: 100vh;
+        width: 50%;
+        margin-top: -8px;
+        padding-top: 8px;
+    }
+}

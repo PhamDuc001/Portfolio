@@ -1,4 +1,22 @@
-.portfolio-infor {}
+.portfolio-infor {
+    animation: fadeIn ease 0.6s;
+    display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.portfolio-infot__active {
+    display: block;
+}
 
 .portfolio-img {
     width: 100%;
@@ -9,17 +27,29 @@
 .portfolio-avt {
     border-radius: 3px;
     width: 120.58px;
+    margin-left: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.close__infor-icon {
+    color: #000;
+    font-size: 4rem;
+    margin: 60%;
+    padding: 10px;
+    display: none;
 }
 
 .portfolio-text {
-    margin: 10px 0;
+    margin: 10px 0px 10px 24px;
     color: rgb(17, 17, 17);
     font-size: 1.8rem;
     font-family: sans-serif;
 }
 
 .portfolio-sub-text {
-    margin: 15px 0;
+    margin: 15px 0 15px 24px;
     color: #757575;
     font-size: 1.4rem;
 }
@@ -30,8 +60,21 @@
 }
 
 .portfolio-footer__item {
-    padding: 8px 0;
+    padding: 8px 0 8px 24px;
     font-size: 1.6rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: #292828;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.change-color {
+    color: green;
+}
+
+.portfolio-footer__item:hover {
+    background-color: #ccc8c8;
 }
 
 .portfolio-item__icon {
@@ -40,7 +83,7 @@
 }
 
 .portfolio-social {
-    padding: 18px 16px 18px 0;
+    padding: 18px 16px 18px 20px;
 }
 
 .portfolio-social i {
@@ -51,6 +94,15 @@
 
 
 /******Header*****/
+
+.header-menu {
+    padding: 10px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    cursor: pointer;
+    max-width: 50px;
+    display: none;
+}
 
 .header-text {
     font-size: 4rem;
@@ -83,8 +135,7 @@
 /*******Place list******/
 
 .place-img {
-    width: 32.8rem;
-    height: 21.8rem;
+    width: 100%;
     text-align: center;
 }
 
@@ -95,7 +146,7 @@
 .container-place {
     padding: 4px 16px;
     font-size: 1.6rem;
-    width: 245px;
+    width: 100%;
 }
 
 .place-text {
